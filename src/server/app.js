@@ -10,8 +10,8 @@ var swig = require('swig');
 
 // *** routes *** //
 var routes = require('./routes/index.js');
-var products = require('/routes/products.js');
-var checkout = require('/routes/checkout.js');
+var products = require('./routes/products.js');
+var checkout = require('./routes/checkout.js');
 
 
 // *** express instance *** //
