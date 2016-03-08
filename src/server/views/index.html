@@ -16,29 +16,30 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
-      <li data-target="#myCarousel" data-slide-to="3"></li>
+      {% for image in images %}
+      {% if loop.index0 === 0 %}
+        <li data-target="#myCarousel" data-slide-to="{{image.id}}" class="active"></li>
+        {% else %}
+        <li data-target="#myCarousel" data-slide-to="{{image.id}}"></li>
+        {% endif %}
+      {% endfor %}
+
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
+
+    {% for image in images %}
+    {% if loop.index0 === 0 %}
       <div class="item active slider-size">
-        <img src="https://images.unsplash.com/photo-1452942000102-9c4c7aaeac81?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Turtle">
-      </div>
-
+          <img src="{{image.image}}" alt="Turtle">
+        </div>
+    {% else %}
       <div class="item slider-size">
-        <img src="https://images.unsplash.com/photo-1428672824825-ac9b4adc2cd6?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Chania">
-      </div>
-
-      <div class="item slider-size">
-        <img src="https://images.unsplash.com/photo-1428973085873-61a784626aad?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Flower">
-      </div>
-
-      <div class="item slider-size">
-        <img src="https://images.unsplash.com/photo-1421882100557-2daba9680b08?crop=entropy&dpr=2&fit=crop&fm=jpg&h=700&ixjsv=2.1.0&ixlib=rb-0.3.5&q=50&w=1300" alt="Flower">
-      </div>
+          <img src="{{image.image}}" alt="Turtle">
+        </div>
+        {% endif %}
+    {% endfor %}
   </div>
 
   <!-- Left and right controls -->
