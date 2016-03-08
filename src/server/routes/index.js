@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
   .then(function(data) {
     console.log(data);
     res.render('index', {
-      title: 'Express',
+      title: 'Sluggish Sidekicks',
       images: data
       });
   })
