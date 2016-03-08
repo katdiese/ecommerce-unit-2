@@ -38,7 +38,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 
 // *** main routes *** //
 app.use('/', routes);
-// app.use('/products', products);
+app.use('/products/', products);
 // app.use('/checkout', checkout);
 
 
