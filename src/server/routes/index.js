@@ -17,7 +17,11 @@ router.get('/', function(req, res, next) {
       images: data
       });
   })
-
 });
+
+router.get('/home', function(req, res, next) {
+  res.redirect('/');
+})
+
 
 module.exports = router;
