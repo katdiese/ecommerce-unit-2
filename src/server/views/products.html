@@ -4,30 +4,31 @@
 
 
 {% block content %}
+  {% include "./nav.html" %}
 
   <div class="container">
-    
+
     {% for animal in products %}
-    
+
     <div class="row" style="padding-bottom: 15px;">
-      
+
       <div class="col-md-4">
         <image class="img-responsive" src="../../{{ animal.image }}"></image>
       </div>
-      
+
       <div class="col-md-4">
         <h2>Meet {{ animal.name }}</h2>
         <br>
         <p>This {{ animal.origin }}, {{ animal.gender }}, {{ animal.species }} is {{ animal.age }} years old.</p>
         <br>
         <h5>${{ animal.price }}</h5>
-        
+
         <button class="btn btn-success" style="float: right;">Add to Cart</button>
-      </div>  
+      </div>
     </div>
-    
+
     {% endfor %}
-      
+
   </div>
 
   {% include "./footer.html" %}
