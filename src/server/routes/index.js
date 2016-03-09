@@ -6,9 +6,10 @@ var options = {
 var pgp = require('pg-promise') (options);
 var connectionString = process.env.DATABASE_URL || 'postgress://localhost:5432/animals';
 var db = pgp(connectionString);
+var queries = require('../queries/index-queries');
 
 router.get('/', function(req, res, next) {
-  db.any('SELECT * FROM carousel_images')
+  queries.getCarouselImages()
   .then(function(data) {
     console.log(data);
     res.render('index', {
