@@ -12,6 +12,7 @@ var swig = require('swig');
 var routes = require('./routes/index.js');
 var products = require('./routes/products.js');
 var checkout = require('./routes/checkout.js');
+var cart = require('./routes/cart.js');
 
 
 // *** express instance *** //
@@ -39,6 +40,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 // *** main routes *** //
 app.use('/', routes);
 app.use('/products/', products);
+app.use('/cart', cart);
 // app.use('/checkout', checkout);
 
 
