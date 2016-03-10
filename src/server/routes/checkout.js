@@ -1,23 +1,23 @@
 var express = require('express');
 var router = express.Router();
-var queries = require('../queries/checkout-queries');
+var queries = require('../queries/cart-queries');
 
 router.get('/', function(req, res, next) {
 
-  queries.populateReceipt(1)
+  // queries.populateReceipt(1)
 
-  .then( function (result) {
-    console.log(result);
+  // .then( function (result) {
+    // console.log(result);
       res.render('checkout',
         {
-          title: 'Checkout Page',
-          purchase : result
+          title: 'Checkout Page'
+          // purchase : result
         }
       );
-    }
-  )
+  //   }
+  // )
 
-  .catch( function ( err ) { return err; });
+  // .catch( function ( err ) { return err; });
 
 });
 
