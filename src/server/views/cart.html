@@ -17,14 +17,22 @@
       </div>
       <div class="col-md-6">
         <p>Name: {{animal.name}}</p>
+        <p>Price: {{animal.price}}</p>
         <p>Quantity: {{animal.quantity}}</p>
-        <p>Price (per animal): {{animal.price}}</p>
+        <p>Total: {{animal.total}}</p>
       </div>
     </div>
-  </div>
-  <br><br>
 
   {% endfor %}
+  
+    <div class="row">
+      <div class="col-md-4 pull-right">
+        <h2>Order Total: {{ grandTotal[0].sum }}<h2>
+      </div>  
+    </div>
+  
+  </div>
+  <br><br>  
 
   {% include "./footer.html" %}
 
