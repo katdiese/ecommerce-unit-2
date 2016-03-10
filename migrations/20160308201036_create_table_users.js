@@ -4,8 +4,9 @@ exports.up = function(knex, Promise) {
     table.increments();
     table.string('name');
     table.string('username');
-    table.string('password');   
-  })  
+    table.string('password');
+    table.boolean('admin');
+  })
 };
 
 exports.down = function(knex, Promise) {
