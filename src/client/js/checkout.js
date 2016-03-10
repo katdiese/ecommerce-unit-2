@@ -6,29 +6,29 @@ $(document).ready (function () {
 
 	$('#sameAsBilling').change(function () {
     $('#shipping-info').toggle();
-		$('#firstNameBilling').prop('disabled', $(this).is(':checked'));
-		$('#lastNameBilling').prop('disabled', $(this).is(':checked'));
-		$('#emailBilling').prop('disabled', $(this).is(':checked'));
-		$('#addressBilling').prop('disabled', $(this).is(':checked'));
-		$('#cityBilling').prop('disabled', $(this).is(':checked'));
-		$('#stateBilling').prop('disabled', $(this).is(':checked'));
-		$('#zipCodeBilling').prop('disabled', $(this).is(':checked'));
+		$('#firstNameShipping').prop('disabled', $(this).is(':checked'));
+		$('#lastNameShipping').prop('disabled', $(this).is(':checked'));
+		$('#emailShipping').prop('disabled', $(this).is(':checked'));
+		$('#addressShipping').prop('disabled', $(this).is(':checked'));
+		$('#cityShipping').prop('disabled', $(this).is(':checked'));
+		$('#stateShipping').prop('disabled', $(this).is(':checked'));
+		$('#zipCodeShipping').prop('disabled', $(this).is(':checked'));
 		if ($(this).is(':checked')) {
-			$('#firstNameBilling').val($('#firstNameShipping').val());
-			$('#lastNameBilling').val($('#lastNameShipping').val());
-			$('#emailBilling').val($('#emailShipping').val());
-			$('#addressBilling').val($('#addressShipping').val());
-			$('#cityBilling').val($('#cityShipping').val());
-			$('#stateBilling').val($('#stateShipping').val());
-			$('#zipCodeBilling').val($('#zipCodeShipping').val());
+			$('#firstNameShipping').val($('#firstNameBilling').val());
+			$('#lastNameShipping').val($('#lastNameBilling').val());
+			$('#emailShipping').val($('#emailBilling').val());
+			$('#addressShipping').val($('#addressBilling').val());
+			$('#cityShipping').val($('#cityBilling').val());
+			$('#stateShipping').val($('#stateBilling').val());
+			$('#zipCodeShipping').val($('#zipCodeBilling').val());
 		} else {
-			$('#firstNameBilling').val('');
-			$('#lastNameBilling').val('');
-			$('#emailBilling').val('');
-			$('#addressBilling').val('');
-			$('#cityBilling').val('');
-			$('#stateBilling').val('');
-			$('#zipCodeBilling').val('Choose');
+			$('#firstNameShipping').val('');
+			$('#lastNameShipping').val('');
+			$('#emailShipping').val('');
+			$('#addressShipping').val('');
+			$('#cityShipping').val('');
+			$('#stateShipping').val('');
+			$('#zipCodeShipping').val('Choose');
 		}
 
 	});
