@@ -40,8 +40,12 @@ app.use(express.static(path.join(__dirname, '../client')));
 // *** main routes *** //
 app.use('/', routes);
 app.use('/products/', products);
+<<<<<<< HEAD
 app.use('/cart', cart);
 // app.use('/checkout', checkout);
+=======
+app.use('/checkout', checkout);
+>>>>>>> upstream/master
 
 
 // catch 404 and forward to error handler
