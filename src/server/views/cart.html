@@ -5,15 +5,15 @@
 
 {% block content %}
   {% include "./nav.html" %}
-
+<div class="container-fluid">
   <h1>Shopping Cart</h1>
 
   {% for animal in cart %}
 
-  <div class="container-fluid">
+  
     <div class="row">
-      <div class="col-md-6">
-        <img src="{{animal.image}}" alt="animal image">
+      <div class="col-md-3">
+        <img class="img-responsive" src="{{animal.image}}" alt="{{animal.name}} image">
       </div>
       <div class="col-md-6">
         <p>Name: {{animal.name}}</p>
@@ -22,6 +22,7 @@
         <p>Total: {{animal.total}}</p>
       </div>
     </div>
+    <br>
 
   {% endfor %}
   
@@ -32,7 +33,7 @@
     </div>
   
   </div>
-  <br><br>  
+  <br>
 
   {% include "./footer.html" %}
 
