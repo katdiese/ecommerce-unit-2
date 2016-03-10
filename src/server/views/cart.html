@@ -6,7 +6,24 @@
 {% block content %}
   {% include "./nav.html" %}
 
+  <h1>Shopping Cart</h1>
 
+  {% for animal in cart %}
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{animal.image}}" alt="animal image">
+      </div>
+      <div class="col-md-6">
+        <p>Name: {{animal.name}}</p>
+        <p>Quantity: {{animal.quantity}}</p>
+        <p>Price (per animal): {{animal.price}}</p>
+      </div>
+    </div>
+  </div>
+
+  {% endfor %}
 
   {% include "./footer.html" %}
 
