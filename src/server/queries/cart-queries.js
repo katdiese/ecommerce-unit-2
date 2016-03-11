@@ -7,7 +7,7 @@ function Cart() {
 module.exports = {
   getCart: function(userID) {
 
-  return knex.raw('SELECT * FROM animals INNER JOIN (SELECT user_id, quantity, animal_id, (quantity * price) as total FROM shopping_carts) as temp ON (animals.id = temp.animal_id) WHERE user_id = 3;');
+  return knex.raw('SELECT * FROM animals INNER JOIN (SELECT user_id, quantity, animal_id, (quantity * price) as total FROM shopping_carts) as temp ON (animals.id = temp.animal_id) WHERE user_id = ' + userID + ';');
 
   },
 

@@ -6,9 +6,9 @@ router.get('/', function(req, res, next) {
   
   var promises = [];
   
-  promises.push(queries.getCart(3));
+  promises.push(queries.getCart(req.user.id));
   
-  promises.push(queries.getGrandTotal(3));
+  promises.push(queries.getGrandTotal(req.user.id));
   
   Promise.all(promises)
   
