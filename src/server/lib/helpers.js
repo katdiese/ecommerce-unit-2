@@ -40,6 +40,7 @@ function comparePassword(password, hashedpassword) {
   return bcrypt.compareSync(password, hashedpassword);
 }
 
+
 module.exports = {
   ensureAuthenticated: ensureAuthenticated,
   loginRedirect: loginRedirect,
