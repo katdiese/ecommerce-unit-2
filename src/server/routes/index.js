@@ -79,5 +79,16 @@ router.get('/admin/', function(req, res, next) {
   }
 });
 
+router.post('/admin', function(req, res, next) {
+  queries.addAnimal(req.body.name, req.body.age, req.body.gender, req.body.origin, req.body.image, req.body.price, req.body.species)
+  
+  .then( function () {  
+    res.redirect('/products')
+  })
+  
+  .catch( function () { res.render('admin', {message : 'That animal was no good'}) });
+  
+})
+
 
 module.exports = router;
