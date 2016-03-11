@@ -71,5 +71,13 @@ router.get('/home', function(req, res, next) {
   res.redirect('/');
 });
 
+router.get('/admin/', function(req, res, next) { 
+  if (req.user.admin) {
+    res.render('admin');
+  } else {
+    res.redirect('/');
+  }
+});
+
 
 module.exports = router;
